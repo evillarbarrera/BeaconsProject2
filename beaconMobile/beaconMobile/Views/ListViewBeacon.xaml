@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="beaconMobile.Views.ListViewBeacon"
+             >
+    <ListView x:Name="ltbeacon" IsPullToRefreshEnabled = "True" RefreshCommand="{Binding RefreshCommand}"
+           IsRefreshing="{Binding IsRefreshing}"> 
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding minor, StringFormat='Beacon :{0}'}" Detail="{Binding fecha_lecturaDatetime, StringFormat='fecha :{0:dd MMM yyyy HH:mm:ss}'}"></TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</ContentPage>
